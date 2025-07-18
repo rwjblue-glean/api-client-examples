@@ -43,7 +43,7 @@ public class ChatTest {
 
         ChatMessage chatMessage = ChatMessage.builder()
             .fragments(chatMessageFragmentList)
-//            .author(Author.USER)
+            .author(Author.USER)
             .build();
        
         List<ChatMessage> chatMessageList = new ArrayList<>();

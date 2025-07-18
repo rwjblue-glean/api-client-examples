@@ -18,11 +18,7 @@ This directory contains examples demonstrating how to use the Glean Java API cli
    export GLEAN_INSTANCE="your_instance_name"
    ```
 
-2. Build and publish the Glean library locally (from the parent directory):
-   ```bash
-   cd ../api-client-java
-   ./gradlew publishToMavenLocal -x test -Pskip.signing
-   ```
+2. From the examples root directory (`../`), the Java examples will automatically build the API client library as needed.
 
 ## Running Examples
 
@@ -30,14 +26,24 @@ This directory contains examples demonstrating how to use the Glean Java API cli
 Demonstrates basic chat functionality with the Glean API:
 
 ```bash
-gradle run
+# From the examples root directory
+mise run java:chat
+```
+
+Alternative ways to run:
+```bash
+# Run any example by class name
+mise run java:run -- ChatTest
+
+# Or run directly with Gradle
+gradle -p java run
 ```
 
 This example:
 - Creates a chat message with the text "What are the company holidays this year?"
-- Sets the author as `USER` (required for user-initiated messages)
+- Sets the author as `USER` (required for user-initiated messages)  
 - Sends the request to the chat endpoint
-- Prints the response
+- Prints timing information and the response
 
 ## Example Structure
 
@@ -50,5 +56,6 @@ src/main/java/
 ## Notes
 
 - All examples read credentials from environment variables for security
-- Make sure your API token has the necessary permissions for the operations you're testing
+- Make sure your API token has the necessary permissions for the operations you're testing  
 - The examples use debug logging to help you see the HTTP requests being made
+- The Java examples automatically build the Glean API client library using Gradle's composite build feature

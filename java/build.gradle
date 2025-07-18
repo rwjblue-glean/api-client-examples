@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation 'com.glean.api-client:glean-api-client:0.7.0'
+}
+
+application {
+    mainClass = project.hasProperty('mainClass') ? project.property('mainClass') : 'ChatTest'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}

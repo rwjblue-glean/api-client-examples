@@ -1,0 +1,48 @@
+# Build outputs
+**/build/
+**/target/
+**/dist/
+**/out/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Gradle
+.gradle/
+gradle-app.setting
+
+# Maven
+.mvn/
+
+# Node.js (for future examples)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (for future examples)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+
+# Temporary files
+*.tmp
+*.temp
+*~

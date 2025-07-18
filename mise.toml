@@ -1,0 +1,11 @@
+[tools]
+java = "openjdk-17"
+gradle = "8"
+
+[tasks."java:run"]
+description = "Run a Java example (usage: mise run java:run -- ExampleName)"
+run = "gradle -p java -PmainClass=${1:-ChatTest} run"
+
+[tasks."java:chat"]
+description = "Run the Java chat example"
+run = "gradle -p java -PmainClass=ChatTest run"

@@ -1,0 +1,8 @@
+rootProject.name = 'glean-java-examples'
+
+// Include the API client library as a composite build
+includeBuild('../api-client-java') {
+    dependencySubstitution {
+        substitute module('com.glean.api-client:glean-api-client') using project(':')
+    }
+}
